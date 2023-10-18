@@ -7,7 +7,7 @@ import {
 	InMemoryCache,
 } from '@apollo/client';
 
-const client = new ApolloClient({
+export const client = new ApolloClient({
 	uri: 'https://beta.pokeapi.co/graphql/v1beta', // The GraphQL endpoint of the PokeAPI
 	cache: new InMemoryCache(),
 });
