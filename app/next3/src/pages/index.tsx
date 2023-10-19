@@ -9,6 +9,8 @@ import GraphQLProvider from "@/lib/GraphQLProvider"
 // ----------------------------------- MAIN ------------------------------------
 // =============================================================================
 
+import { createApolloClient} from "@/lib/GraphQLProvider";
+import { gql } from "@apollo/client";
 
 
 async function getData() {
@@ -26,7 +28,7 @@ async function getData() {
 	//return res.json()
 }
 
-export default async function Home() {
+export default function Home() {
 
 	//const data = await getData()
 	//console.log(data.results[0]);
@@ -56,11 +58,50 @@ export default async function Home() {
 	//}, []);
 
 	return (
-		<div style={{display:"flex", height:"100vh"}}>
-			<Pokedex/>
-		</div>
+		//<Frame>
+			<div style={{display:"flex", height:"100vh"}}>
+
+				<GraphQLProvider>
+					<Pokedex/>
+				</GraphQLProvider>
+			</div>
+			//</Frame>
 	)
 }
+
+const query = gql`
+query samplePokeAPIquery {
+	gen3_species: pokemon_v2_pokemonspecies(limit:10){
+		name
+		id
+	}
+}
+`
+
+
+export async function GetServerSideProps({ params }:any) {
+	const apolloClient = createApolloClient();
+	const { data } = await apolloClient.query({ query: query });
+	console.log(data);
+
+	//console.log(params.pokemon);
+	//const pokemon_list = data.gen3_species
+	//const apolloClient = createApolloClient();
+	//const { data } = await apolloClient.query({
+	//query: GET_USER,
+	//variables: { id: params.id }
+	//});
+
+	return {
+		props: {
+			//pokemon: params.pokemon
+		}
+	};
+}
+
+
+
+
 
 
 

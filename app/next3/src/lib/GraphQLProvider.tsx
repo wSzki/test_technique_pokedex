@@ -7,6 +7,7 @@ import {
 	HttpLink,
 } from '@apollo/client';
 
+
 export const createApolloClient = () => {
   return new ApolloClient({
     link: new HttpLink({
@@ -15,10 +16,7 @@ export const createApolloClient = () => {
     cache: new InMemoryCache(),
   });
 };
-
-
 export const client = new ApolloClient({
-	uri: 'https://beta.pokeapi.co/graphql/v1beta', // The GraphQL endpoint of the PokeAPI
 	cache: new InMemoryCache(),
 });
 
