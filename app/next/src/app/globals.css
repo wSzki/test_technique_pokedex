@@ -6,4 +6,10 @@
 }
 
 *{font-family: Pokemon !important}
-html {background-color: #f5edba;}
+html {
+	height: 100%;
+	background-color: #f5edba;
+	background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp8797773.png&f=1&nofb=1&ipt=a2108ef70bf9e4430777e65edf33acd185a8a27599ba2dd9169bb745a0765ed9&ipo=images");
+	background-size: 100% 100%;
+	   background-attachment: fixed;
+}
