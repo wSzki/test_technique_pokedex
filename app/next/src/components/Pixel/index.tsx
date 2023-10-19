@@ -1,5 +1,7 @@
+"use client"
+
 import styled from 'styled-components'
-import { GLOBALS } from '@/pages/_app';
+import { GLOBALS } from '@/settings';
 
 // =============================================================================
 // ---------------------------------- GLOBALS ----------------------------------
@@ -19,7 +21,7 @@ const getColor = (props:any) => {
 			case props.red    : return '#3e2137';
 			case props.blue   : return '#34859d';
 			case props.yellow : return '#647d34';
-			case props.green  : return 'green';
+			case props.green  : return '#17434b';
 			default: return 'gray';
 		}
 	}
@@ -28,8 +30,8 @@ const getColor = (props:any) => {
 			case props.red    : return '#9d303b';
 			case props.blue   : return '#7ec4c1';
 			case props.yellow : return '';
-			case props.green  : return 'green';
-			default: return 'gray';
+			case props.green  : return '#17434b';
+			default: return '#ece5ed';
 		}
 	}
 	else{
@@ -37,7 +39,7 @@ const getColor = (props:any) => {
 			case props.red    : return '#9d303b';
 			case props.blue   : return '#7ec4c1';
 			case props.yellow : return '#f5edba';
-			case props.green  : return 'green';
+			case props.green  : return '#17434b';
 			case props.brown  : return '#1f0e1c';
 			default: return 'gray';
 		}
@@ -61,15 +63,20 @@ const getWidth= (props:any) => {
 // ----------------------------------- MAIN ------------------------------------
 // =============================================================================
 
-const Pixel = styled.div<{
-	dark?   : boolean|string,
-	blue ?   : boolean|string,
-	brown?   : boolean|string,
-	yellow? : boolean|string,
-	red?    : boolean|string,
+interface PixelProps {
+	dark?   : string|boolean,
+	light?   : string|boolean,
+	blue?   : string|boolean,
+	brown?  : string|boolean,
+	yellow? : string|boolean,
+	green?  : string|boolean,
+	red?    : string|boolean,
 	h?      : number,
 	w?      : number
-}>
+}
+
+
+const Pixel = styled.div<PixelProps>
 `
 position: relative;
 height           : ${props => getHeight(props)};
@@ -80,3 +87,4 @@ background-color : ${props => getColor (props)};
 
 
 export default Pixel
+
