@@ -74,6 +74,7 @@ export const get_all_pokemons = gql`
 query MyQuery ($pokemonName: String!) {
 	pokemon_v2_pokemonspecies {
 		name
+		id
 		pokemon_v2_pokemonspeciesflavortexts(where: {language_id: {_eq: 9}}) {
 			flavor_text
 		}

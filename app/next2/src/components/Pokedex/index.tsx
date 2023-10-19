@@ -1,28 +1,17 @@
 import PokedexMain from './PokedexMain';
+import PokedexSecondary from './PokedexSecondary';
 
-import { gql, useQuery } from '@apollo/client';
-import { getClient } from '@/lib/client';
-import { GLOBALS } from '@/settings'
+import Div from '@/components/Div';
 
-const query = gql`
-query samplePokeAPIquery {
-	gen3_species: pokemon_v2_pokemonspecies{
-		name
-		id
-	}
-}
-`;
-//https://www.apollographql.com/blog/apollo-client/next-js/how-to-use-apollo-client-with-next-js-13/
 
-const styleProps = GLOBALS.WHITELISTED_PROPS
 
-export default async function Pokedex ({children}:any) {
 
-	const { data } = await getClient().query({ query });
-	if (data) console.log(data.gen3_species[0].name);
+export default async function Pokedex () {
+
 	return (
-		<PokedexMain>
-			{children}
-		</PokedexMain>
+		<Div >
+			<PokedexMain/>
+			<PokedexSecondary/>
+		</Div>
 	)
 }

@@ -36,7 +36,7 @@ align-items         :   ${props => props.align_bottom   ? "end"                 
 width               :   ${props => props.fill           ? "100%"                               : ""};
 height              :   ${props => props.fill           ? "100%"                               : ""};
 justify-content     :   ${props => props.center         ? "center"                      : ""};
-align-items         :   ${props => props.center         ? "middle"                      : ""};
+align-items         :   ${props => props.center         ? "center"                      : ""};
 
 `
 

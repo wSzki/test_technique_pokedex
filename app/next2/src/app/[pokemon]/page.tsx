@@ -1,9 +1,7 @@
 
-
-
-
 import { createApolloClient } from "@/lib/GraphQLProvider"
 import {simple, variable_test, get_pokemon_by_name} from '@/graphQL/simple'
+import ContextHandler from "./ContextHandler"
 
 export default async function Page({ params }: { params: { pokemon: string } }) {
 	const pokemon = await getPokemonByName(params.pokemon)
@@ -14,12 +12,13 @@ export default async function Page({ params }: { params: { pokemon: string } }) 
 
 	return (
 		<div>
-			<p>{pokemon.name}</p>
-			<p>{pokemon.weight}</p>
-			<p>{pokemon.height}</p>
-			<p>{pokemon.description}</p>
-			<div>{types}</div>
-			<img src={pokemon.sprite} alt="" />
+			<ContextHandler pokemon={pokemon}/>
+			{/*<p>{pokemon.name}</p>*/}
+			{/*<p>{pokemon.weight}</p>*/}
+			{/*<p>{pokemon.height}</p>*/}
+			{/*<p>{pokemon.description}</p>*/}
+			{/*<div>{types}</div>*/}
+			{/*<img src={pokemon.sprite} alt="" />*/}
 		</div>
 	)
 }
@@ -51,6 +50,7 @@ async function getPokemonByName(pokemon_name : string) {
 	const type_array  = types.map((type:any) => {return type.pokemon_v2_type.name});
 	const description = pokemon.pokemon_v2_pokemonspeciesflavortexts[0].flavor_text
 	const result      = {
+		id    : info.id,
 		name : pokemon.name,
 		height : info.height,
 		weight : info.weight,

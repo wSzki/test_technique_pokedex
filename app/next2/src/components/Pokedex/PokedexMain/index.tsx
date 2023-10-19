@@ -23,11 +23,13 @@ export default function PokedexMain ({children}:any) {
 				<PokedexMainCorners/>
 				<PokedexMainSeparator/>
 
-				<PokedexMainControl/>
-				<PixelCircle/>
 
 				<PokedexMainSecondayScreen/>
 				<PokedexMainScreen/>
+
+				<PixelCircle x={4} y={17}/>
+				<PixelCircle x={10} y={17}/>
+				<PokedexMainControl/>
 
 			</Pixel>
 		</Div>

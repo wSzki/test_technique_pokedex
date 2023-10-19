@@ -1,7 +1,10 @@
-
+"use client"
 import Div from "@/components/Div"
 import Pixel from "@/components/Pixel"
+import { useGlobalContext } from "@/context/GlobalContext";
 
+
+import { Pixelify } from "react-pixelify";
 function PokedexMainScreenCorners ({children}:any) {
 	function BottomLeft () {
 
@@ -64,11 +67,13 @@ function PokedexMainScreenCorners ({children}:any) {
 }
 
 export default function PokedexMainScreen ({children}:any) {
+	const c:any = useGlobalContext();
 	return (
-		<Div fill absolute padding_left={4} padding_top={15}>
-			<Div fill>
-				<Pixel  yellow w={38}    h={35}>
+		<Div absolute padding_left={4} padding_top={15}>
+			<Div>
+				<Pixel light w={38}    h={35}>
 					<PokedexMainScreenCorners/>
+					{Object.keys(c.main_screen_content).length && c.main_screen_content}
 				</Pixel>
 			</Div>
 		</Div>

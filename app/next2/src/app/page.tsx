@@ -56,9 +56,7 @@ export default async function Home() {
 	//}, []);
 
 	return (
-		<div style={{display:"flex", height:"100vh"}}>
-			<Pokedex/>
-		</div>
+		<></>
 	)
 }
 

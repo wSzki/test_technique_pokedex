@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Pokedex from "@/components/Pokedex"
+import GlobalContextProvider from '@/context/GlobalContext'
+import GlobalContext from '@/context/GlobalContext'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,7 +23,10 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				{children}
+				<GlobalContextProvider>
+					{children}
+					<Pokedex/>
+				</GlobalContextProvider>
 			</body>
 		</html>
 	)

@@ -1,10 +1,16 @@
 import Div from "@/components/Div"
 import Pixel from "@/components/Pixel"
+import { useGlobalContext } from "@/context/GlobalContext";
 
 export default function PokedexMainSecondayScreen ({children}:any) {
+
+	const c:any = useGlobalContext();
+
 	return (
 		<Div fill column absolute padding_left={9} padding_top={61}>
-			<Pixel blue w={18} h={8}/>
+			<Pixel blue w={18} h={8}>
+				{Object.keys(c.main_info_content).length && c.main_info_content}
+			</Pixel>
 			<Div>
 
 				<Pixel dark red    w={1}  h={1}/>

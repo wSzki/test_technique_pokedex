@@ -16,6 +16,8 @@
     "next": "13.5.5",
     "react": "^18",
     "react-dom": "^18",
+    "react-paxelate": "^0.0.4",
+    "react-pixelify": "^0.2.2",
     "styled-components": "^6.1.0"
   },
   "devDependencies": {
