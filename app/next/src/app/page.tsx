@@ -44,7 +44,6 @@ async function getAllPokemons() {
 	const { data } = await apolloClient.query({
 		query: get_all_pokemons,
 	});
-	console.log(data);
 
 	const pokemon       = data.pokemon_v2_pokemonspecies;
 

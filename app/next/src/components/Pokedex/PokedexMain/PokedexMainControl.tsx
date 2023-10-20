@@ -29,7 +29,6 @@ function Main ({children}:any) {
 function List ({children}:any) {
 	const c:any = useGlobalContext();
 	const router = usePathname()
-	console.log(c.offset * c.pagination);
 	return (
 		<>
 			<Div absolute column fill>

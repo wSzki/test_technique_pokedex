@@ -36,7 +36,6 @@ export default function PokedexButtons ({children}:any) {
 			</Link>
 			<div style={{display:"flex"}}onClick={()=>{
 				if (c.pagination > 2){
-					console.log("===" + (c.offset * (c.pagination - 1)));
 					c.set_pagination(c.pagination - 1)
 					c.set_selected((c.offset) * (c.pagination - 1) )
 				}
