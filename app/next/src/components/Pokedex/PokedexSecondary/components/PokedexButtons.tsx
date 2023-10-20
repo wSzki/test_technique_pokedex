@@ -31,7 +31,7 @@ export default function PokedexButtons ({children}:any) {
 
 	return (
 		<Div>
-			<Link onClick={()=>{alert("Not implemented yet")}}style={{display:"flex"}} href="/favourites">
+			<Link onClick={()=>{window.alert("Not implemented yet")}}style={{display:"flex"}} href="/favourites">
 				<Button	src={"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwebstockreview.net%2Fimages%2Fpixel-hearts-png-11.png&f=1&nofb=1&ipt=1c51b25fe7595ea98563a76481ef1e1362c7fc6b78320e71de95d5d15c5e34be&ipo=images"}/>
 			</Link>
 			<div style={{display:"flex"}}onClick={()=>{

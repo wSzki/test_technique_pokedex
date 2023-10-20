@@ -4,7 +4,6 @@ import Pixel from "@/components/Pixel"
 import { useGlobalContext } from "@/context/GlobalContext";
 
 
-import { Pixelify } from "react-pixelify";
 function PokedexMainScreenCorners ({children}:any) {
 	function BottomLeft () {
 
