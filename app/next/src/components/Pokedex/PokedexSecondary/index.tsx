@@ -9,6 +9,7 @@ import PokedexButtons from './components/PokedexButtons';
 
 import { useGlobalContext } from "@/context/GlobalContext";
 import { GLOBALS } from '@/settings'
+import { useRouter } from 'next/navigation'
 const styleProps= GLOBALS.WHITELISTED_PROPS
 
 
@@ -51,6 +52,23 @@ function PokedexDescriptionScreen ({children}:any) {
 				<Pixel className={'broken-screen'} green h={11} w={35}>
 					<div style={{color:"white"}}>
 						{Object.keys(c.description).length && c.description}
+					</div>
+				</Pixel>
+			</Div>
+		</Div>
+	)
+}
+
+function PokedexSearchInput ({children}:any) {
+	const c:any = useGlobalContext();
+	const router = useRouter();
+	return (
+		<Div column>
+			<Div>
+				<Pixel brown h={4} w={1}/>
+				<Pixel className={'broken-screen'} green h={4} w={35}>
+					<div style={{color:"white", display:"flex", width:"100%", height:"100%"}}>
+						<input onFocusCapture={()=>router.push("/list")} onChange={(e)=>c.set_search(e.target.value)} placeholder='Search' style={{width:"100%"}}/>
 					</div>
 				</Pixel>
 			</Div>
@@ -101,8 +119,10 @@ export default function PokedexMain ({children}:any) {
 
 				<Pixel red h={60} w={45}>
 					<Div column center>
+						<Pixel red h={3} w={35}/>
+						<PokedexSearchInput/>
 
-						<Pixel red h={8} w={35}/>
+						<Pixel red h={2} w={35}/>
 						<PokedexDescriptionScreen/>
 
 						<Pixel red h={3} w={35}/>

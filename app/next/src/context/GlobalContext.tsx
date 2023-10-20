@@ -25,6 +25,7 @@ export default function GlobalProvider({ children }:any) {
 	const [ current_pokemon_id,   set_current_pokemon_id  ] = useState<number>(0);
 	const [ current_pokemon_name, set_current_pokemon_name] = useState<string>("");
 	const [ offset,               set_offset              ] = useState<number>(0);
+	const [ search,               set_search              ] = useState<string>("");
 
 	useEffect(() => {
 		//if (selected >= pagination) set_selected(pagination - 1);
@@ -42,7 +43,8 @@ export default function GlobalProvider({ children }:any) {
 		selected,            set_selected,
 		current_pokemon_id,  set_current_pokemon_id,
 		current_pokemon_name,set_current_pokemon_name,
-		offset,              set_offset
+		offset,              set_offset,
+		search,              set_search
 		}}>
       {children}
     </GlobalContext.Provider>
