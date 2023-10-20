@@ -15,8 +15,8 @@ so please excuse the non formatted code, lingering `console.logs()`, ununsed fil
 
 I tried to use a little dependencies as possible.
 
-This app build in `production` mode by default.\
-Use `make re -e PROD=0` to launch in dev mode
+This app buildd in `production` mode by default.\
+Use `make re -e PROD=0` to launch in dev mode, or edit the makefile
 
 ## Live Demo
 A running demo can be seen [here](https://wszki-pokedex.vercel.app).
