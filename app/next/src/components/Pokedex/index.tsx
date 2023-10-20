@@ -14,7 +14,8 @@ scrollbar-width: none;
 @media (max-width: 868px) {
 	flex-direction: column;
 	position: asbolute;
-	overflow: scroll;
+	overflowY: scroll;
+	overflowX: hidden;
 	padding-right: 11px;
 	padding-top : 20px;
 }
