@@ -6,7 +6,7 @@ This repository contains a front-end React webapp - a Pokedex.
 
 With this project, I've taken the opportunity to learn about graphQL and the NextJS `app` router.
 
-I've tried to use styled-components the best way I could, but it appears that it does go along very well with NextJS SSR/SSG.
+I've tried to use styled-components the best way I could, but it appears that it does not work very well with `NextJS SSR/SSG` - perhaps I've missed something.
 
 The layout is an experiment around building a structure with a single `<Pixel/>` component, but in indsight I probably should have sticked to `flex`
 
