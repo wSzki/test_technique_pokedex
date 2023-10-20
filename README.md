@@ -15,7 +15,7 @@ so please excuse the non formatted code, lingering `console.logs()`, ununsed fil
 
 I tried to use a little dependencies as possible.
 
-This app buildd in `production` mode by default.\
+This app builds in `production` mode by default.\
 Use `make re -e PROD=0` to launch in dev mode, or edit the Makefile
 
 ## Live Demo
