@@ -135,7 +135,7 @@ https://github.com/wSzki/test_technique_pokedex/assets/59784520/c3209fe4-7f0c-41
 ## PokeAPI GraphQL
 https://pokeapi.co/docs/graphql
 
-## PokeApi Spites
+## PokeAPI Spites
 https://github.com/PokeAPI/sprites
 
 ## Pixelated Image thru https://www.pixelicious.xyz/
