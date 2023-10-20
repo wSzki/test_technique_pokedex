@@ -131,7 +131,11 @@ https://github.com/wSzki/test_technique_pokedex/assets/59784520/5a50b9e6-02f6-42
 https://github.com/wSzki/test_technique_pokedex/assets/59784520/c3209fe4-7f0c-418c-a0b1-d9df419ac401
 
 
+## original Image
 
+![pokedex](https://github.com/wSzki/test_technique_pokedex/assets/59784520/35c249ef-1b65-4af7-ae1b-b646544fad91)
 
+## Pixelated Image 
 
-```
+![pixelpokedex](https://github.com/wSzki/test_technique_pokedex/assets/59784520/eaa1c5c2-ab95-4991-8beb-400a491a1575)
+
