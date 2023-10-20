@@ -16,7 +16,7 @@ import PokemonHeight      from "./components/PokemonHeight";
 function PokemonInfo ({pokemon}:{pokemon:Pokemon}) {
 	return (
 		<Div column center fill>
-			<p style={{fontSize:0.9 * GLOBALS.CONSTANT + GLOBALS.UNIT}}  >Height : {pokemon.height}"</p>
+			<p style={{fontSize:0.9 * GLOBALS.CONSTANT + GLOBALS.UNIT}}  >Height : {pokemon.height}</p>
 			<p style={{fontSize:0.9 * GLOBALS.CONSTANT + GLOBALS.UNIT}}  >Weight : {pokemon.weight} lbs.</p>
 		</Div>
 	)

@@ -10,6 +10,7 @@ import { useGlobalContext } from "@/context/GlobalContext"
 
 function Main ({children}:any) {
 	const router = useRouter()
+	const c:any = useGlobalContext();
 	return (
 		<>
 			<Div absolute column fill>

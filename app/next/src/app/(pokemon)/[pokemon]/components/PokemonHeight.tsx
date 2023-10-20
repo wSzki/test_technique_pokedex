@@ -8,7 +8,7 @@ export default function PokemonHeight({pokemon}:{pokemon:Pokemon}) {
 				color: "white",
 				fontSize: GLOBALS.CONSTANT + GLOBALS.UNIT,
 				padding: GLOBALS.CONSTANT + GLOBALS.UNIT,
-				}}  > HEIGHT {pokemon.height * 10} cm</p>
+				}}  > HEIGHT {pokemon.height??0 * 10} cm</p>
 		</Div>
 	)
 }

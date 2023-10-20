@@ -1,6 +1,6 @@
 
 export const GLOBALS = {
-	CONSTANT  : 10,
+	CONSTANT  : 7,
 	UNIT      : "px",
 	IMAGE_SRC : "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/",
 	WHITELISTED_PROPS : [

@@ -35,28 +35,42 @@ export async function generateStaticParams() {
 async function getPokemonByName(pokemon_name : string) {
 
 	const apolloClient = createApolloClient();
-	
-	const { data } = await apolloClient.query({
-		query: get_pokemon_by_name,
-		variables: { pokemonName : pokemon_name}
-	});
 
-	const pokemon       = data.pokemon_v2_pokemonspecies[0];
-	const info          = pokemon.pokemon_v2_pokemons[0];
-	const types         = info.pokemon_v2_pokemontypes;
-	const type_array    = types.map((type:any) => {return type.pokemon_v2_type.name});
-	const description   = pokemon.pokemon_v2_pokemonspeciesflavortexts[0].flavor_text
-	//const all_sprites = JSON.parse(info.pokemon_v2_pokemonsprites[0].sprites);
-	//const sprite      = all_sprites.front_default;
-	const result : Pokemon = {
-		id          : info.id,
-		name        : pokemon.name,
-		height      : info.height,
-		weight      : info.weight,
-		types       : type_array,
-		description : description,
-		sprite      : GLOBALS.IMAGE_SRC + info.id + ".png"
+	try {
+		const { data } = await apolloClient.query({
+			query: get_pokemon_by_name,
+			variables: { pokemonName : pokemon_name}
+		});
+
+		const pokemon       = data.pokemon_v2_pokemonspecies[0];
+		const info          = pokemon.pokemon_v2_pokemons[0];
+		const types         = info.pokemon_v2_pokemontypes;
+		const type_array    = types.map((type:any) => {return type.pokemon_v2_type.name});
+		const description   = pokemon.pokemon_v2_pokemonspeciesflavortexts[0].flavor_text
+		//const all_sprites = JSON.parse(info.pokemon_v2_pokemonsprites[0].sprites);
+		//const sprite      = all_sprites.front_default;
+		const result : Pokemon = {
+			id          : info.id,
+			name        : pokemon.name,
+			height      : info.height,
+			weight      : info.weight,
+			types       : type_array,
+			description : description,
+			sprite      : GLOBALS.IMAGE_SRC + info.id + ".png"
+		}
+
+		return result;
 	}
-
-	return result;
+	catch (e) {
+		const result : Pokemon = {
+			id          : -1,
+			name        : "Pokemon Not Found",
+			height      : -1,
+			weight      : -1,
+			types       : ["Pokemon Not Found"],
+			description : "Pokemon Not Found",
+			sprite      : ".png"
+		}
+		return result;
+	}
 }

@@ -3,6 +3,7 @@ import Div from "@/components/Div"
 import capitalize from "@/lib/capitalize"
 
 export default function PokemonTypes ({pokemon}:{pokemon:Pokemon}) {
+	if (pokemon.types.length === 0) return (<></>)
 	return (
 		<>
 			<Div center fill>

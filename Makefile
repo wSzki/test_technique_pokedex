@@ -11,14 +11,14 @@
 PROD           = 0
 NEXT_URL       = http://localhost:9999
 ENV_DEST       = ./app/.env
-NEXT_PORT      = 9999:9999
+NEXT_PORT      = 9999:3000
 
 ifeq (${PROD}, 1)
 	NODE_ENV        = production
-	NEXT_COMMAND    = yarn && yarn build && yarn start
+	NEXT_COMMAND    = npm i && npm run build && npm run start
 else
 	NODE_ENV        = development
-	NEXT_COMMAND    = yarn && yarn dev
+	NEXT_COMMAND    = npm i && npm run dev
 endif
 
 DCOMP             = docker-compose -f ./app/docker-compose.yml

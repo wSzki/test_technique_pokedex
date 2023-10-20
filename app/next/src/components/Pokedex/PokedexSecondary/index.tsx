@@ -10,10 +10,12 @@ import PokedexButtons from './components/PokedexButtons';
 import { useGlobalContext } from "@/context/GlobalContext";
 import { GLOBALS } from '@/settings'
 import { useRouter } from 'next/navigation'
+import styled from 'styled-components';
+
 const styleProps= GLOBALS.WHITELISTED_PROPS
 
 
-function Edge ({children}:any) {
+function Edge ({bottom}:any) {
 
 	let arr:any = [];
 	for (let i = 0; i < 14; i++) {
@@ -29,7 +31,7 @@ function Edge ({children}:any) {
 
 	return (
 		<Pixel invisible h={14} w={45}>
-			<Div fill align_bottom  >
+			<Div fill align_bottom={bottom}  >
 				{arr}
 			</Div>
 
@@ -110,12 +112,26 @@ function PokemonTypes () {
 	)
 }
 
+const MediaQueryWrapperTop = styled.div`
+display: flex;
+@media (max-width: 868px) {
+	display: none;
+}
+`;
+
+const MediaQueryWrapperBottom = styled.div`
+display: none;
+@media (max-width: 868px) {
+	display: flex;
+}
+`;
+
 
 export default function PokedexMain ({children}:any) {
 	return (
 		<StyleSheetManager shouldForwardProp={propertyName => isPropValid(propertyName) && !styleProps.includes(propertyName)}>
 			<Div column>
-				<Edge/>
+				<MediaQueryWrapperTop><Edge bottom={true}/></MediaQueryWrapperTop>
 
 				<Pixel red h={60} w={45}>
 					<Div column center>
@@ -138,14 +154,15 @@ export default function PokedexMain ({children}:any) {
 
 				</Pixel>
 
+				<MediaQueryWrapperBottom><Edge /></MediaQueryWrapperBottom>
 
 
 
 
 
 			</Div>
-
-			<Div column>
+			<MediaQueryWrapperTop>
+				<Div column>
 				<Pixel invisible h={14} w={1}/>
 				<Pixel h={1} w={1}/>
 				<Pixel dark red h={33} w={1}/>
@@ -154,6 +171,7 @@ export default function PokedexMain ({children}:any) {
 				<Pixel invisible h={1} w={1}/>
 				<Pixel dark red h={7} w={1}/>
 			</Div>
+		</MediaQueryWrapperTop>
 		</StyleSheetManager>
 	)
 }

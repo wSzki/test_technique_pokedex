@@ -3,18 +3,21 @@
 import {useGlobalContext} from "@/context/GlobalContext";
 import { GLOBALS } from "@/settings";
 import Div from "@/components/Div";
+import { useEffect } from "react";
 
 
 function PokemonImage ({pokemons, id}:any) {
 	const c:any = useGlobalContext();
+	useEffect(() => {
+		if (c.selected === id) {
+			c.set_current_pokemon_id(pokemons[id].id)
+			c.set_current_pokemon_name(pokemons[id].name)
+		}
+	}, [c.selected])
 	if (c.selected >= pokemons.length)
 		return <></>
 	if (!pokemons[id])
 		return <></>
-	if (c.selected === id) {
-			c.set_current_pokemon_id(pokemons[id].id)
-			c.set_current_pokemon_name(pokemons[id].name)
-	}
 
 	return (
 		<img
@@ -42,7 +45,7 @@ export default function PokemonMainScreen({pokemons, show}:any, ) {
 	let array:any = [];
 	for (let i = 0 + offset; i < c.pagination + offset; i++) {
 		array.push(
-			<Div column center >
+			<Div key={i} column center >
 				<PokemonImage pokemons={pokemons} id={i}/>
 			</Div>
 		)

@@ -11,22 +11,23 @@ function PokedexMainScreenCorners ({children}:any) {
 
 		let len = 6;
 		let array : any = [];
-		while (len-- > 1)
+		while (len-- > 1){
 			array.push(
 				<Div key={len} column>
 					<Pixel red dark/>
 					<Pixel red h={len}/>
 				</Div>
 			)
+		}
 
-			return (
-				<Div absolute bottom left align_bottom>
-					{array}
-					<Div column>
-						<Pixel />
-					</Div>
+		return (
+			<Div absolute bottom left align_bottom>
+				{array}
+				<Div column>
+					<Pixel />
 				</Div>
-			)
+			</Div>
+		)
 	}
 
 	function TopLeft() {

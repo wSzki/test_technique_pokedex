@@ -20,10 +20,10 @@ export default function PokemonMainScreen({pokemon}:{pokemon:Pokemon}) {
 		return (
 			<img
 				style={{
-					objectFit: "cover",
+					objectFit: "contain",
 					imageRendering: "pixelated",
 					width:"100%",
-					height:"100%"
+					height:"100%",
 				}}
 				src={pokemon.sprite}
 				alt=""

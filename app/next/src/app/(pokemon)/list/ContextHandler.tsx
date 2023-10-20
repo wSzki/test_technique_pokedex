@@ -38,7 +38,7 @@ export default function ContextHandler({pokemons}: {pokemons:Pokemon[]}) {
 		c.set_types               (<PokemonInfo       str={"---"}/>)
 		c.set_weight              (<PokemonInfo       str={"---"}/>)
 		c.set_height              (<PokemonInfo       str={"---"}/>)
-	}, [pokemons, c.current_pokemon_id, c.current_pokemon_name, c.search]);
+	}, [pokemons, c.current_pokemon_id, c.current_pokemon_name, c.search, c.pagination, c.offset]);
 
 	return <></>
 }

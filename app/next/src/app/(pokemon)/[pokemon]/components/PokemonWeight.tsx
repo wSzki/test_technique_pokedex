@@ -10,7 +10,7 @@ export default function PokemonWeight({pokemon}:{pokemon:Pokemon}) {
 				padding: GLOBALS.CONSTANT + GLOBALS.UNIT,
 				}}  >
 
-				WEIGHT {pokemon.weight/10} kg </p>
+				WEIGHT {pokemon.weight??1 /10} kg </p>
 		</Div>
 	)
 }

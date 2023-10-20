@@ -27,10 +27,6 @@ export default function GlobalProvider({ children }:any) {
 	const [ offset,               set_offset              ] = useState<number>(0);
 	const [ search,               set_search              ] = useState<string>("");
 
-	useEffect(() => {
-		//if (selected >= pagination) set_selected(pagination - 1);
-	}, [pagination]);
-
   return (
     <GlobalContext.Provider value={{
 		main_screen_content, set_main_screen_content,
