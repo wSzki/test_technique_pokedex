@@ -8,6 +8,8 @@ With this project, I've taken the opportunity to learn about graphQL and the Nex
 
 I've tried to use styled-components the best way I could, but it appears that it does go along very well with NextJS SSR/SSG.
 
+The layout is an experiment around building a structure with a single `<Pixel/>` component, but in indsight I probably should have sticked to `flex`
+
 Initially there was no deadline on this project but I've been asked to send an MVP ASAP, \
 so please excuse the non formatted code, lingering `console.logs()`, ununsed files/functions and bugs.
 
