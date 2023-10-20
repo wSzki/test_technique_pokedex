@@ -53,7 +53,7 @@ function PokedexDescriptionScreen ({children}:any) {
 				<Pixel brown h={11} w={1}/>
 				<Pixel className={'broken-screen'} green h={11} w={35}>
 					<div style={{color:"white"}}>
-						{Object.keys(c.description).length && c.description}
+						{c.description && c.description}
 					</div>
 				</Pixel>
 			</Div>
@@ -85,12 +85,12 @@ function PokemonWidthHeight () {
 			<Div>
 				<Pixel brown h={5} w={1}/>
 				<Pixel green h={6} w={18}>
-					{Object.keys(c.weight).length && c.weight}
+					{c.weight && c.weight}
 				</Pixel>
 				<Pixel red h={6} w={3}/>
 				<Pixel brown h={5} w={1}/>
 				<Pixel green h={6} w={18}>
-					{Object.keys(c.height).length && c.height}
+					{c.height && c.height}
 				</Pixel>
 			</Div>
 		</Pixel>
@@ -105,7 +105,7 @@ function PokemonTypes () {
 			<Div>
 				<Pixel dark red h={6} w={1}/>
 				<Pixel yellow  h={6} w={24}>
-					{Object.keys(c.types).length && c.types}
+					{c.types && c.types}
 				</Pixel>
 			</Div>
 		</Pixel>

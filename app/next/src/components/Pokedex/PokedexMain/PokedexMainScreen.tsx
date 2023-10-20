@@ -73,7 +73,7 @@ export default function PokedexMainScreen ({children}:any) {
 			<Div>
 				<Pixel light w={38}    h={35}>
 					<PokedexMainScreenCorners/>
-					{Object.keys(c.main_screen_content).length && c.main_screen_content}
+					{c.main_screen_content && c.main_screen_content}
 				</Pixel>
 			</Div>
 		</Div>
