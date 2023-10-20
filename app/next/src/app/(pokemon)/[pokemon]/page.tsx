@@ -1,8 +1,10 @@
 
-import {GLOBALS}                    from "@/settings"
-import {createApolloClient}         from "@/lib/GraphQLProvider"
-import {simple,get_pokemon_by_name} from '@/graphQL'
-import ContextHandler               from "./ContextHandler"
+import {GLOBALS}                       from "@/settings"
+import {createApolloClient}            from "@/lib/GraphQLProvider"
+import {simple,get_pokemon_by_name, get_all_pokemons}    from '@/graphQL'
+import ContextHandler                  from "./ContextHandler"
+import { Metadata, ResolvingMetadata } from 'next'
+import capitalize from "@/lib/capitalize"
 
 // =============================================================================
 // ----------------------------------- MAIN ------------------------------------
@@ -27,6 +29,46 @@ export async function generateStaticParams() {
 	return pokemons.map((pokemon:any) => ({
 		pokemon: pokemon.name,
 	}))
+}
+
+
+// =============================================================================
+// ----------------------------------- META ------------------------------------
+// =============================================================================
+
+type Props = {
+	params: { id: string }
+	searchParams: { [key: string]: string | string[] | undefined }
+}
+
+
+export async function generateMetadata(
+	{ params, searchParams }: any,
+	parent: ResolvingMetadata
+): Promise<Metadata> {
+
+	const apolloClient = createApolloClient();
+
+	const { data } = await apolloClient.query({
+		query: get_all_pokemons,
+	});
+
+
+	try {
+		const pokemon = data.pokemon_v2_pokemonspecies.filter((pokemon:any) => {
+			if (pokemon.name === params.pokemon) { return true }
+		})
+		if (pokemon.length === 0) { throw new Error("Pokemon not found") }
+		return {
+			title: capitalize(pokemon[0].name),
+			openGraph: {
+				images : [GLOBALS.IMAGE_SRC + pokemon[0].id + ".png"]
+			},
+		}
+	}
+	catch (e) {
+		return {title: "Pokedex"}
+	}
 }
 
 // =============================================================================
