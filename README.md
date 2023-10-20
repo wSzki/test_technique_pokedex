@@ -132,6 +132,12 @@ https://github.com/wSzki/test_technique_pokedex/assets/59784520/c3209fe4-7f0c-41
 
 # Sources 
 
+## PokeAPI GraphQL
+https://pokeapi.co/docs/graphql
+
+## PokeApi Srpites
+https://github.com/PokeAPI/sprites
+
 ## Original Image
 [src](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd31xsmoz1lk3y3.cloudfront.net%2Fbig%2F1250871.jpg%3Fv%3D1569751436&f=1&nofb=1&ipt=6398d99cde890a9d75d302fd0529f78b89a7ca3df1a3e25e85c72c653ceffe73&ipo=images)
 
