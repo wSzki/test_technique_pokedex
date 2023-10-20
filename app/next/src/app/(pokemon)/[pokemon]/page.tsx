@@ -47,14 +47,14 @@ export async function generateMetadata(
 	parent: ResolvingMetadata
 ): Promise<Metadata> {
 
-	const apolloClient = createApolloClient();
-
-	const { data } = await apolloClient.query({
-		query: get_all_pokemons,
-	});
-
-
 	try {
+		const apolloClient = createApolloClient();
+
+		const { data } = await apolloClient.query({
+			query: get_all_pokemons,
+		});
+
+
 		const pokemon = data.pokemon_v2_pokemonspecies.filter((pokemon:any) => {
 			if (pokemon.name === params.pokemon) { return true }
 		})
