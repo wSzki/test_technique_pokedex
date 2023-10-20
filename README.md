@@ -132,8 +132,11 @@ https://github.com/wSzki/test_technique_pokedex/assets/59784520/c3209fe4-7f0c-41
 
 # Sources 
 
-## original Image
-![pokedex]([https://github.com/wSzki/test_technique_pokedex/assets/59784520/35c249ef-1b65-4af7-ae1b-b646544fad91](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd31xsmoz1lk3y3.cloudfront.net%2Fbig%2F1250871.jpg%3Fv%3D1569751436&f=1&nofb=1&ipt=6398d99cde890a9d75d302fd0529f78b89a7ca3df1a3e25e85c72c653ceffe73&ipo=images)https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd31xsmoz1lk3y3.cloudfront.net%2Fbig%2F1250871.jpg%3Fv%3D1569751436&f=1&nofb=1&ipt=6398d99cde890a9d75d302fd0529f78b89a7ca3df1a3e25e85c72c653ceffe73&ipo=images)
+## Original Image
+[src](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd31xsmoz1lk3y3.cloudfront.net%2Fbig%2F1250871.jpg%3Fv%3D1569751436&f=1&nofb=1&ipt=6398d99cde890a9d75d302fd0529f78b89a7ca3df1a3e25e85c72c653ceffe73&ipo=images)
+
+![pokedex](https://github.com/wSzki/test_technique_pokedex/assets/59784520/7fc8afa9-d35b-4be9-bbd8-5f1dea4c7d06)
+
 
 ## Pixelated Image thru https://www.pixelicious.xyz/
 ![pixelpokedex](https://github.com/wSzki/test_technique_pokedex/assets/59784520/eaa1c5c2-ab95-4991-8beb-400a491a1575)
