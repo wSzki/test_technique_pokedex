@@ -79,34 +79,49 @@ Voici les fonctionnalités que votre app doit avoir :
 • [✅] Page d’accueil avec tous les Pokémon (au minimum nom + image)
 ```
 
-https://github.com/wSzki/test_technique_pokedex/assets/59784520/b5c3ce91-a412-4561-b8b0-dc03d2fb6e8f
+
+https://github.com/wSzki/test_technique_pokedex/assets/59784520/609e06d4-f0a9-477b-90ff-e7839416a2ff
+
+
 
 ```
 • [✅] Avoir une pagination sur la page d’accueil (afficher 10 Pokémon par page)
 ```
 
-https://github.com/wSzki/test_technique_pokedex/assets/59784520/71453b4b-2252-482d-b3ab-ceac6b8f2e43
+
+https://github.com/wSzki/test_technique_pokedex/assets/59784520/05bbe57b-fcc4-4825-a73b-310b5bfea0c6
+
+
 
 
 ```
 • [✅] Quand on clique sur un Pokémon, on doit avoir accès à toute ses informations
 ```
 
-https://github.com/wSzki/test_technique_pokedex/assets/59784520/54677d79-be6c-4f70-aaa1-0e70c78f3045
+
+
+https://github.com/wSzki/test_technique_pokedex/assets/59784520/ea16576f-f96b-4268-855a-9ac2eaadc24d
+
 
 
 ```
 • [✅] Une recherche de Pokémon
 ```
 
-https://github.com/wSzki/test_technique_pokedex/assets/59784520/f5eb9ecc-0240-492c-b82b-ad02fcf3be93
+
+
+https://github.com/wSzki/test_technique_pokedex/assets/59784520/5a50b9e6-02f6-4249-bfba-5683ded8ea00
+
 
 
 ```
 • [✅] Votre app doit être responsive (minimum desktop + mobile)
 ```
 
-https://github.com/wSzki/test_technique_pokedex/assets/59784520/b3681206-17bd-4d2f-b6ec-d8b3af00d762
+
+
+https://github.com/wSzki/test_technique_pokedex/assets/59784520/c3209fe4-7f0c-418c-a0b1-d9df419ac401
+
 
 
 
