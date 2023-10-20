@@ -144,7 +144,5 @@ https://github.com/PokeAPI/sprites
 ## Original Image
 [source](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd31xsmoz1lk3y3.cloudfront.net%2Fbig%2F1250871.jpg%3Fv%3D1569751436&f=1&nofb=1&ipt=6398d99cde890a9d75d302fd0529f78b89a7ca3df1a3e25e85c72c653ceffe73&ipo=images)
 
-![pokedex](https://github.com/wSzki/test_technique_pokedex/assets/59784520/7fc8afa9-d35b-4be9-bbd8-5f1dea4c7d06)
-
 ## Background image
 [source](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp8797773.png&f=1&nofb=1&ipt=e2bf4d60e57ff070bb4402b3a66ed517e848c7ba3a2ef3e512acd8e705cd7110&ipo=images)
