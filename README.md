@@ -18,7 +18,8 @@ Use `make re -e PROD=0` to launch in dev mode
 
 ## Live Demo
 A running demo can be seen [here](https://wszki-pokedex.vercel.app).
-![poke](https://github.com/wSzki/test_technique_pokedex/assets/59784520/68506a36-3833-400d-b765-e3b530034e45)
+
+![poke](https://github.com/wSzki/test_technique_pokedex/assets/59784520/88c02028-42c4-4c4b-828a-ac7c50c95343)
 
 
 ## Build and run
