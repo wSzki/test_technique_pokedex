@@ -1,9 +1,9 @@
 
 
-import {GLOBALS}                    from "@/settings"
-import {createApolloClient}         from "@/lib/GraphQLProvider"
-import {simple,get_all_pokemon_with_info, get_all_pokemons} from '@/graphQL'
-import ContextHandler               from "./ContextHandler"
+import {GLOBALS}            from "@/settings"
+import {createApolloClient} from "@/lib/GraphQLProvider"
+import {get_all_pokemons}   from '@/graphQL'
+import ContextHandler       from "./ContextHandler"
 
 // =============================================================================
 // ----------------------------------- MAIN ------------------------------------

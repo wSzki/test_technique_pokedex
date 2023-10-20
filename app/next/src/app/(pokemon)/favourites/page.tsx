@@ -1,7 +1,6 @@
-export default function favourites ({children}:any) {
+export default function favourites () {
 	return (
 		<>
-
 		</>
 	)
 }
