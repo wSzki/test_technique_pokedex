@@ -12,7 +12,8 @@ so please excuse the non formatted code, lingering `console.logs()`, ununsed fil
 
 
 ## Live Demo
-A running demo can be seen [here](https://wszki-pokedex.vercel.app/).
+A running demo can be seen [here](https://wszki-pokedex.vercel.app).
+![poke](https://github.com/wSzki/test_technique_pokedex/assets/59784520/68506a36-3833-400d-b765-e3b530034e45)
 
 
 ## Build and run
@@ -75,8 +76,39 @@ Notions à utiliser :
 
 Voici les fonctionnalités que votre app doit avoir :
 • [✅] Page d’accueil avec tous les Pokémon (au minimum nom + image)
+
+
+https://github.com/wSzki/test_technique_pokedex/assets/59784520/f51d3f16-e332-430d-8f10-ae3441711bfb
+
+
+
 • [✅] Avoir une pagination sur la page d’accueil (afficher 10 Pokémon par page)
+
+
+https://github.com/wSzki/test_technique_pokedex/assets/59784520/71453b4b-2252-482d-b3ab-ceac6b8f2e43
+
+
+
 • [✅] Quand on clique sur un Pokémon, on doit avoir accès à toute ses informations
+
+
+https://github.com/wSzki/test_technique_pokedex/assets/59784520/54677d79-be6c-4f70-aaa1-0e70c78f3045
+
+
+
 • [✅] Une recherche de Pokémon
+
+
+https://github.com/wSzki/test_technique_pokedex/assets/59784520/f5eb9ecc-0240-492c-b82b-ad02fcf3be93
+
+
+
 • [✅] Votre app doit être responsive (minimum desktop + mobile)
+
+
+https://github.com/wSzki/test_technique_pokedex/assets/59784520/b3681206-17bd-4d2f-b6ec-d8b3af00d762
+
+
+
+
 ```
