@@ -13,6 +13,8 @@ so please excuse the non formatted code, lingering `console.logs()`, ununsed fil
 
 I tried to use a little dependencies as possible.
 
+This app build in `production` mode by default.\
+Use `make re -e PROD=0` to launch in dev mode
 
 ## Live Demo
 A running demo can be seen [here](https://wszki-pokedex.vercel.app).
@@ -47,9 +49,9 @@ in `/Makefile` to `NEXT_PORT = YOUR_PORT:9999`
 make re
 ```
 
-#### Build and run the app in production mode (`NODE_ENV=production`)
+#### Build and run the app in dev mode (`NODE_ENV=dev`)
 ```
-make re -e PROD=1
+make re -e PROD=0
 ```
 
 #### Shutdown the app
