@@ -24,6 +24,11 @@ A running demo can be seen [here](https://test-technique-pokedex.vercel.app/).
 ![poke](https://github.com/wSzki/test_technique_pokedex/assets/59784520/88c02028-42c4-4c4b-828a-ac7c50c95343)
 
 
+## Link previews
+
+![link previews](https://github.com/wSzki/test_technique_pokedex/assets/59784520/dba6e255-904e-41aa-b9bf-558a72b4e7cd)
+
+
 ## Build and run
 
 #### Dependencies
