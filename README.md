@@ -26,7 +26,8 @@ A running demo can be seen [here](https://test-technique-pokedex.vercel.app/).
 
 ## Link previews
 
-![link previews](https://github.com/wSzki/test_technique_pokedex/assets/59784520/dba6e255-904e-41aa-b9bf-558a72b4e7cd)
+![link previews](https://github.com/wSzki/test_technique_pokedex/assets/59784520/ab79b824-97b4-4d9f-8eef-ec468765f452)
+
 
 
 ## Build and run
