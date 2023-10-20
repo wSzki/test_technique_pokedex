@@ -64,15 +64,16 @@ const getWidth= (props:any) => {
 // =============================================================================
 
 interface PixelProps {
-	dark?   : string|boolean,
-	light?   : string|boolean,
-	blue?   : string|boolean,
-	brown?  : string|boolean,
-	yellow? : string|boolean,
-	green?  : string|boolean,
-	red?    : string|boolean,
-	h?      : number,
-	w?      : number
+	dark?     : string|boolean,
+	invisible ? : string|boolean,
+	light?    : string|boolean,
+	blue?     : string|boolean,
+	brown?    : string|boolean,
+	yellow?   : string|boolean,
+	green?    : string|boolean,
+	red?      : string|boolean,
+	h?        : number,
+	w?        : number
 }
 
 
@@ -83,6 +84,7 @@ height           : ${props => getHeight(props)};
 width            : ${props => getWidth (props)};
 max-height       : '100vh';
 background-color : ${props => getColor (props)};
+background-color : ${props => props.invisible ? 'rgba(0,0,255,0)' : 1};
 `
 
 

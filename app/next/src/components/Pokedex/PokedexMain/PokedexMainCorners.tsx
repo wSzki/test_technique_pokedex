@@ -9,7 +9,7 @@ export default function PokedexMainCorners ({children}:any) {
 			<Div absolute bottom left align_bottom>
 				<Div column>
 					<Pixel red dark h={2}/>
-					<Pixel yellow/>
+					<Pixel dark red/>
 				</Div>
 				<Pixel red dark h={4}/>
 				<Pixel red dark h={2}/>
@@ -23,7 +23,7 @@ export default function PokedexMainCorners ({children}:any) {
 		return (
 			<Div absolute top left>
 				<Div column>
-					<Pixel yellow/>
+					<Pixel dark red/>
 					<Pixel red dark/>
 				</Div>
 				<Pixel h={1}/>
@@ -44,7 +44,7 @@ export default function PokedexMainCorners ({children}:any) {
 		return (
 			<Div absolute bottom right>
 				<Div column>
-					<Pixel red/>
+					<Pixel invisible />
 					<Pixel red dark/>
 				</Div>
 				<Pixel red dark/>

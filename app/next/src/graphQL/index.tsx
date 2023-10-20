@@ -70,6 +70,38 @@ query MyQuery ($pokemonName: String!) {
 	}
 }
 `
+export const get_all_pokemon_with_info = gql`
+query MyQuery {
+	pokemon_v2_pokemonspecies {
+		name
+		pokemon_v2_pokemonspeciesflavortexts(where: {language_id: {_eq: 9}}) {
+			flavor_text
+		}
+		pokemon_v2_pokemons {
+			id
+			base_experience
+			height
+			weight
+			pokemon_v2_pokemonmoves {
+				id
+				pokemon_v2_move {
+					name
+				}
+			}
+			pokemon_v2_pokemontypes {
+				pokemon_v2_type {
+					name
+				}
+			}
+			pokemon_v2_pokemonsprites {
+				sprites
+			}
+		}
+	}
+}
+`
+
+
 export const get_all_pokemons = gql`
 query MyQuery {
 	pokemon_v2_pokemonspecies {

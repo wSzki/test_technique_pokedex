@@ -5,6 +5,7 @@ export const GLOBALS = {
 	IMAGE_SRC : "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/",
 	WHITELISTED_PROPS : [
 		'dark',
+		'opacity',
 		'blue',
 		'brown',
 		'light',

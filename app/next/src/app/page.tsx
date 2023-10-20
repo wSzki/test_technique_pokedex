@@ -5,27 +5,30 @@ import { GLOBALS } from "@/settings"
 import Div from "@/components/Div"
 import capitalize from "@/lib/capitalize"
 import Link from "next/link"
+import { Suspense } from "react"
 
 export default async function Home() {
 	const all_pokemons : Pokemon[] = await getAllPokemons()
 
 	const pokemon_list = all_pokemons.map((pokemon:Pokemon) => {
 		return (
-			<Link href={"/"+pokemon.name} key={pokemon.id}>
-				<div style={{backgroundColor:"#ececec", margin:"1vw", boxShadow:"rgba(0, 0, 0, 0.35) 0px 5px 15px", borderRadius:"10px"}} >
-					<Div column center>
-						<p>#{pokemon.id} </p>
-						<p>{capitalize(pokemon.name)}</p>
-					</Div>
-					<img style={{width:"14vw",objectFit:"cover",imageRendering: "pixelated"}} loading="lazy" src={GLOBALS.IMAGE_SRC+pokemon.id+".png"} alt="" />
-				</div>
-			</Link>
+				<Link href={"/"+pokemon.name} key={pokemon.id}>
+					<div style={{backgroundColor:"#ececec", margin:"1vw", boxShadow:"rgba(0, 0, 0, 0.35) 0px 5px 15px", borderRadius:"10px"}} >
+						<Div column center>
+							<p>#{pokemon.id} </p>
+							<p>{capitalize(pokemon.name)}</p>
+						</Div>
+						<img style={{width:"14vw",objectFit:"cover",imageRendering: "pixelated"}} loading="lazy" src={GLOBALS.IMAGE_SRC+pokemon.id+".png"} alt="" />
+					</div>
+				</Link>
 		)
 	})
 
 
 	return (
-		<div style={{display:"flex", flexWrap:"wrap", justifyItems:"center", justifyContent:"center"}}>{pokemon_list}</div>
+		<Suspense fallback={<p>Loading ...</p>}>
+			<div style={{display:"flex", flexWrap:"wrap", justifyItems:"center", justifyContent:"center", overflowY:"scroll"}}>{pokemon_list}</div>
+		</Suspense>
 	)
 }
 

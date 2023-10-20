@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 import { StyleSheetManager } from 'styled-components';
 import isPropValid from '@emotion/is-prop-valid';
+import PokedexButtons from './components/PokedexButtons';
 
 import { useGlobalContext } from "@/context/GlobalContext";
 import { GLOBALS } from '@/settings'
@@ -26,7 +27,7 @@ function Edge ({children}:any) {
 
 
 	return (
-		<Pixel yellow h={14} w={45}>
+		<Pixel invisible h={14} w={45}>
 			<Div fill align_bottom  >
 				{arr}
 			</Div>
@@ -47,49 +48,12 @@ function PokedexDescriptionScreen ({children}:any) {
 			</Div>
 			<Div>
 				<Pixel brown h={11} w={1}/>
-				<Pixel green h={11} w={35}>
+				<Pixel className={'broken-screen'} green h={11} w={35}>
 					<div style={{color:"white"}}>
 						{Object.keys(c.description).length && c.description}
 					</div>
 				</Pixel>
 			</Div>
-		</Div>
-	)
-}
-
-function PokedexButtons ({children}:any) {
-
-	function Button ({src, text, href}:any) {
-		return (
-			<>
-				<Pixel red h={8} w={1}/>
-				<Div column >
-					<Pixel dark red h={8} w={8.5}>
-						<Div absolute right>
-							<Pixel blue h={8} w={8}>
-								{src &&	<img style={{width:"93%", height:"100%"}} src={src}/>}
-								<Div fill center>
-									{text && <p style={{color:"white"}}>{text}</p>}
-								</Div>
-							</Pixel>
-						</Div>
-					</Pixel>
-				</Div>
-			</>
-		)
-	}
-
-
-	return (
-		<Div>
-			<Link style={{display:"flex"}} href="/favourites">
-				<Button	src={"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwebstockreview.net%2Fimages%2Fpixel-hearts-png-11.png&f=1&nofb=1&ipt=1c51b25fe7595ea98563a76481ef1e1362c7fc6b78320e71de95d5d15c5e34be&ipo=images"}/>
-			</Link>
-			<Button text="-1"/>
-			<Button text="10"/>
-			<Button text="+1"/>
-
-
 		</Div>
 	)
 }
@@ -162,12 +126,12 @@ export default function PokedexMain ({children}:any) {
 			</Div>
 
 			<Div column>
-				<Pixel yellow h={14} w={1}/>
+				<Pixel invisible h={14} w={1}/>
 				<Pixel h={1} w={1}/>
 				<Pixel dark red h={33} w={1}/>
-				<Pixel red h={1} w={1}/>
+				<Pixel invisible h={1} w={1}/>
 				<Pixel dark red h={13} w={1}/>
-				<Pixel red h={1} w={1}/>
+				<Pixel invisible h={1} w={1}/>
 				<Pixel dark red h={7} w={1}/>
 			</Div>
 		</StyleSheetManager>
