@@ -76,12 +76,16 @@ Notions à utiliser :
 
 Voici les fonctionnalités que votre app doit avoir :
 • [✅] Page d’accueil avec tous les Pokémon (au minimum nom + image)
+```
 
 
-https://github.com/wSzki/test_technique_pokedex/assets/59784520/f51d3f16-e332-430d-8f10-ae3441711bfb
+https://github.com/wSzki/test_technique_pokedex/assets/59784520/b5c3ce91-a412-4561-b8b0-dc03d2fb6e8f
 
 
 
+
+
+```
 • [✅] Avoir une pagination sur la page d’accueil (afficher 10 Pokémon par page)
 
 
