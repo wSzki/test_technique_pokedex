@@ -4,24 +4,30 @@
 
 This repository contains a front-end React webapp - a Pokedex.
 
-With this project, I've taken the opportunity to learn about graphQL and the NextJS `app` router.
+With this project, I've taken the opportunity to learn about graphQL and the NextJS `app` router, and the built in `Metadata` functions for link previews.
 
 I've tried to use styled-components the best way I could, but it appears that it does not work very well with `NextJS SSR/SSG` - perhaps I've missed something.
 
 The layout is an experiment around building a structure with a single `<Pixel/>` component, but in indsight I probably should have sticked to `flex`
-
-Initially there was no deadline on this project but I've been asked to send an MVP ASAP, \
-so please excuse the non formatted code, lingering `console.logs()`, ununsed files/functions and bugs.
 
 I tried to use a little dependencies as possible.
 
 This app builds in `production` mode by default.\
 Use `make re -e PROD=0` to launch in dev mode, or edit the Makefile
 
+Some fetch requests randomly fail; it might be due to the beta state of the GraphQL PokeAPI, or the rate limiting (100req / hour).
+I'm not sure how to handle them.
+
 ## Live Demo
 A running demo can be seen [here](https://test-technique-pokedex.vercel.app/).
 
 ![poke](https://github.com/wSzki/test_technique_pokedex/assets/59784520/88c02028-42c4-4c4b-828a-ac7c50c95343)
+
+
+## Link previews
+
+![lp](https://github.com/wSzki/test_technique_pokedex/assets/59784520/a783c7c2-3f1f-490c-adf7-cb53f6d1ec32)
+
 
 
 ## Build and run
