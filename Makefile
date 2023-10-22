@@ -8,7 +8,7 @@
 # ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 # prod | dev
-PROD           = 1
+PROD           = 0
 NEXT_URL       = http://localhost:9999
 ENV_DEST       = ./app/.env
 NEXT_PORT      = 9999:3000

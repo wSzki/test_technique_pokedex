@@ -12,8 +12,8 @@ The layout is an experiment around building a structure with a single `<Pixel/>`
 
 I tried to use a little dependencies as possible.
 
-This app builds in `production` mode by default.\
-Use `make re -e PROD=0` to launch in dev mode, or edit the Makefile
+This app builds in `dev` mode by default.\
+Use `make re -e PROD=1` to launch in `production` mode, or edit the Makefile
 
 Some fetch requests randomly fail; it might be due to the beta state of the GraphQL PokeAPI, or the rate limiting (100req / hour).
 I'm not sure how to handle them.
