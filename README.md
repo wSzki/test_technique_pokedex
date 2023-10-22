@@ -20,6 +20,8 @@ I'm not sure how to handle them.
 
 ## Live Demo
 A running demo can be seen [here](https://test-technique-pokedex.vercel.app/).
+There is an issue which i think is related to SSR and the api limits on the demo (pokemon not found after #150)
+But it works fine locally.
 
 ![poke](https://github.com/wSzki/test_technique_pokedex/assets/59784520/88c02028-42c4-4c4b-828a-ac7c50c95343)
 
