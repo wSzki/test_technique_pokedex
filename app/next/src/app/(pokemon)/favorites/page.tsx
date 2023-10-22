@@ -1,17 +1,6 @@
-
-
-import {GLOBALS}            from "@/settings"
-import {createApolloClient} from "@/lib/GraphQLProvider"
-import {get_all_pokemons}   from '@/graphQL'
-import ContextHandler       from "./ContextHandler"
-
-// =============================================================================
-// ----------------------------------- MAIN ------------------------------------
-// =============================================================================
-export default async function Page() {
-	return <ContextHandler/>;
+export default function Page ({children}:any) {
+	return (
+		<>
+		</>
+	)
 }
-
-// =============================================================================
-// ------------------------------- DATA FETCHING -------------------------------
-// =============================================================================
